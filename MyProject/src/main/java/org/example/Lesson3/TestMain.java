@@ -56,14 +56,14 @@ public class TestMain {
         driver.findElement(By.cssSelector(".\\_129 > .\\_123")).click();
         driver.findElement(By.xpath("//span[contains(.,'Опубликовать')]")).click();
 
+//Завершаем работу с ресурсом
+       //driver.quit();
     }
 
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
 
         autotest();
-        //Thread.sleep(10000l);
-        //Завершаем работу с ресурсом
-        // driver.quit();
+
     }
 }
