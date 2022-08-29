@@ -48,16 +48,16 @@ public class TestMain {
 //        driver.findElement(By.id("comment_submit")).click();
 
 // Test# 4. Edit own post
-        driver.findElement(By.xpath("//*[@id=\"js\"]/body/div[2]/header/div[1]/nav[2]/ul/li[2]/a/span")).click();
-        driver.findElement(By.xpath("//*[@id=\"entry-umed19-318\"]/header/h3/a")).click();
-        driver.findElement(By.cssSelector(".svgicon--more")).click();
-        driver.findElement(By.xpath("//span[contains(.,'Редактировать запись')]")).click();
-        driver.findElement(By.cssSelector(".notranslate")).sendKeys(". Looks like it works");
-        driver.findElement(By.cssSelector(".\\_129 > .\\_123")).click();
-        driver.findElement(By.xpath("//span[contains(.,'Опубликовать')]")).click();
+//        driver.findElement(By.xpath("//*[@id=\"js\"]/body/div[2]/header/div[1]/nav[2]/ul/li[2]/a/span")).click();
+//        driver.findElement(By.xpath("//*[@id=\"entry-umed19-318\"]/header/h3/a")).click();
+//        driver.findElement(By.cssSelector(".svgicon--more")).click();
+//        driver.findElement(By.xpath("//span[contains(.,'Редактировать запись')]")).click();
+//        driver.findElement(By.cssSelector(".notranslate")).sendKeys(". Looks like it works");
+//        driver.findElement(By.cssSelector(".\\_129 > .\\_123")).click();
+//        driver.findElement(By.xpath("//span[contains(.,'Опубликовать')]")).click();
 
 //Завершаем работу с ресурсом
-       //driver.quit();
+       driver.quit();
     }
 
     public static void main(String[] args) throws InterruptedException {
