@@ -45,6 +45,10 @@ public class LiveJournalTest {
         webElement3.sendKeys("U906906m");
         WebElement webElement4 = driver.findElement(By.xpath("//button[@name='action:login']"));
         webElement4.click();
+
+       String URL = driver.getCurrentUrl();
+       Assertions.assertEquals(URL, "https://www.livejournal.com/post");
+       Thread.sleep(5000);
     }
 
     @BeforeEach
@@ -69,10 +73,9 @@ public class LiveJournalTest {
         publishElement.click(driver.findElement(By.xpath("/html/body/div[11]/footer/div/div/div[2]/div[2]/div/footer/div/button/span")));
         publishElement.build().perform();
 
-        String URL = driver.getCurrentUrl();
-        Assertions.assertEquals(URL, "https://www.livejournal.com/post");
-        Thread.sleep(5000);
-    }
+        Assertions.assertDoesNotThrow( ()-> driver.navigate().to("https://www.livejournal.com/post"),
+                "Page is not found");
+       }
 
     @Test
     void AddCommenttest() throws InterruptedException {
@@ -135,6 +138,9 @@ public class LiveJournalTest {
         Actions publishElement2 = new Actions(driver);
         publishElement2.click(driver.findElement(By.xpath("/html[1]/body[1]/div[10]/footer[1]/div[1]/div[1]/div[2]/div[2]/div[1]/footer[1]/div[1]/button[1]/span[1]")));
         publishElement2.build().perform();
+
+        Assertions.assertDoesNotThrow( ()-> driver.navigate().to("https://www.livejournal.com/post"),
+                "Page is not found");
       }
 
          @Test
@@ -169,6 +175,9 @@ public class LiveJournalTest {
              Actions sendbtnElement = new Actions(driver);
              sendbtnElement.click(driver.findElement(By.xpath("//*[@id=\"support_submit\"]")));
              sendbtnElement.build().perform();
+
+             Assertions.assertDoesNotThrow( ()-> driver.navigate().to("https://www.livejournal.com/support/"),
+                     "Page is not found");
          }
 
     @AfterAll
